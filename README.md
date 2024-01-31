@@ -6,15 +6,15 @@ Project Name: Undetermined.
 Description: Undetermined.
 _____
 
-Active team members as of 1/31 1:12pm
+Active team members as of 1/31 3:55pm
 
 Project Manager: Adria Gratiot, ag260153@my.stchas.edu
 
 Developer: Matt Neiner, mn266474@my.stchas.edu
-_____
-
-Inactive team members as of 1/31 1:12pm
 
 Developer: Timothy Huffman, th259988@my.stchas.edu
+_____
+
+Inactive team members as of 1/31 3:55pm
 
 Developer: Carl Samuels, cs249030@my.stchas.edu
