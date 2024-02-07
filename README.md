@@ -1,9 +1,10 @@
 # CPT200SP24-Team1
 Capstone project for CPT-200-F01.24/SP Team 1 at SCCC.
 
-Project Name: Undetermined.
+Project Name: Pet Namer
 
-Description: Undetermined.
+Description: Would you like help picking a name for your pet? 
+Simply upload a picture and we’ll recommend a few different names for you!
 _____
 
 Project Manager: Adria Gratiot, ag260153@my.stchas.edu
