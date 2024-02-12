@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Define character set within website-->
+        <meta charset="UTF-8">
+        <!--Allowing site to be optimized for mobile display-->
+        <meta name ="viewport" content="width=device-width", initial-scale="1.0">
+        <!--block title to be replaced in extension templates-->
+        <title>{% block title %}PetNamer{% endblock %}</title>
+        <!--Loads template tag 'static' so static files(CSS,Images,JS) can be accesses-->
+        {% load static %}
+        <!--Accesses stylesheet made in static/css/styles.css-->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+
+    <body>
+        <header>
+            <h1>PetNamer</h1>
+            <!--Load image in header from static/images/pet1.png-->
+            <img src="{% static 'images/pet1.png' %}" alt="Example Image" width="300" height="200">
+            <nav>
+                <ul>
+                    <!--Check if user is logged in-->
+                    {% if user.is_authenticated %}
+                    <!--Greet logged in user and display options for home and logout-->
+                    <p>Welcome, {{ user.username }}</p>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <!--Uses JS function logout()(defined below)-->
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                    {% else %}
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'signup' %}">Signup</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <!--Creates form, sets to POST, links to logout in views.py and urls.py, creates CSRF token-->
+            <!--Adds CSRF token to form, adds the form to the body of html, submits the form-->
+            <script>
+                function logout() {
+                    var form = document.createElement('form');
+                    form.setAttribute('method', 'post');
+                    form.setAttribute('action', "{% url 'logout' %}");
+                
+                    var csrf = document.createElement('input');
+                    csrf.setAttribute('type', 'hidden');
+                    csrf.setAttribute('name', 'csrfmiddlewaretoken');
+                    csrf.setAttribute('value', '{{ csrf_token }}');
+                    form.appendChild(csrf);
+                
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+             </script>
+
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </body>
+</html>

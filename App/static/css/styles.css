@@ -1,0 +1,135 @@
+/* CSS file for templates, anything with a dot is a custom class */
+/* Most functions can be found online, reach out if you need explanation for any */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: wheat;
+}
+
+header {
+    background-color: #0d6306;
+    color: white;
+    padding:20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover{
+    color: #ccc;
+}
+
+main {
+    padding: 50px;
+    text-align: center;
+}
+
+.login-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: wheat;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"]{
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid lightgray
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+.cta-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 15px;
+}
+
+a {
+    color: dodgerblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error_message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.b1, .b2, .b3 {
+    display: inline-block;
+    width: 350px;
+    height: 425px;
+    background-color: #0d6306;
+    color: white;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+

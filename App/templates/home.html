@@ -1,0 +1,25 @@
+<!--Extend off base template to build homepage-->
+<!--Homepage changes depending on if logged in or not-->
+{% extends 'base.html' %}
+{% block title %}PetNamer{% endblock %}
+
+<!--Overrides base template-->
+{% block content %}
+<h2>Welcome to PetNamer</h2>
+<p>We're not to blame for your pets' bad name!</p>
+<!--Checks if user is not logged in-->
+{% if not user.is_authenticated %}
+<a href ="{% url 'login' %}" class="cta-button">Get Started</a>
+<!--If user logged in, show options-->
+{% else %}
+<div class="b1">
+    <h2>Upload an Image</h2>
+</div>
+<div class="b2">
+    <h2>Favorited Names</h2>
+</div>
+<div class="b3">
+    <h2>Delete Account</h2>
+</div>
+{% endif %}
+{% endblock %}
