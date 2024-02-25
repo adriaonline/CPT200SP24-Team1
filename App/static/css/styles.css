@@ -133,3 +133,13 @@ a:hover {
     margin: 5px;
 }
 
+.google-btn {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.google-btn:hover {
+    background-color: #357AE8; 
+}
+

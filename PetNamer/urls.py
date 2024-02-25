@@ -21,6 +21,7 @@ from App import views
 
 
 urlpatterns = [
+    path('', include('social_django.urls', namespace='social')),
     path("", include ("App.urls")),
     path('admin/', admin.site.urls),
 

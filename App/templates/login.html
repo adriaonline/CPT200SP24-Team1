@@ -17,6 +17,10 @@
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Login</button>
+        
+        <a href="{% url 'social:begin' 'google-oauth2' %}">
+           <img class="google-btn" src="\static\images\google_login.png" alt="Login with Google"> 
+        </a>
         </form>
     </div>
 {% endblock %}
