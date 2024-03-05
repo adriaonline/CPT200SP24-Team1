@@ -1,0 +1,1 @@
+SELECT * FROM pet_names.name_table;
