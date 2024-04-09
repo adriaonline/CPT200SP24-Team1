@@ -17,6 +17,11 @@
     <p>Use the link below to upload an image.</p>
     <p>Please ensure the image is clear and free of obstructions.</p>
     <p>Results may vary based on image quality and image selection.</p>
+    <form method="post" action="{% url 'upload' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
 </div>
 <div class="b2">
     <h1>Favorited Names</h1>

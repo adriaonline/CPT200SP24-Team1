@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Results{% endblock %}
+
+{% block content %}
+
+
+<!--- Check for valid image url to display-->
+{% if image_url %}
+
+<!-- Displayy the detected animal tag that was passed from view-->
+<h2>Detected Animal: {% for tag in valid_tags %} {{tag}} {% endfor %}</h2>
+
+  <!-- Display uplaoded image in forced format size-->
+  <img src="{{ image_url }}" alt="Uploaded Image" width="300" height="300">
+
+  <!-- Display the animal names in a list-->
+<h3>Animal Names</h3>
+
+  <ul>
+    {% for name in animal_names%}
+      <li>{{ name }}</li>
+      {% endfor %}
+
+  </ul>
+
+  <!-- If no image then say "No Image Found"-->
+{% else %}
+  <p> No image found</p>
+{% endif %}
+
+
+{% endblock %}
