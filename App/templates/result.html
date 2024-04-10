@@ -7,13 +7,20 @@
 <!--- Check for valid image url to display-->
 {% if image_url %}
 
+{% if tag in valid_tags %}
 <!-- Displayy the detected animal tag that was passed from view-->
 <h2>Detected Animal: {% for tag in valid_tags %} {{tag}} {% endfor %}</h2>
+{% else %}
+<h2>Could not recognize this animal</h2>
+{% endif %}
+
+
 
 <!-- Display uplaoded image in forced format size-->
 <img src="{{ image_url }}" alt="Uploaded Image" width="40%">
 <!--height="300"-->
 
+{% if name in animal_names %}
 <!-- Display the animal names in a list-->
 <h3>Animal Names</h3>
 
@@ -23,6 +30,7 @@
   {% endfor %}
 
 </ul>
+{% endif %}
 
 <!-- If no image then say "No Image Found"-->
 {% else %}
