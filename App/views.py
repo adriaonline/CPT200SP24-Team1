@@ -87,6 +87,10 @@ def upload_image(request):
                #Send tag to AnimalNames model to look for that species, and return names associated
                animal_names = AnimalNames.objects.filter(species__in=valid_tags).values_list('name', flat=True)
                for name in animal_names: print(name)
+
+               if not valid_tags:
+                    valid_tags = ['Could not recognize this animal']
+                    animal_names = []
           
           #Redirect to the result page where it will display the speices and animal names
           return redirect('result', valid_tags=valid_tags, animal_names=list(animal_names))

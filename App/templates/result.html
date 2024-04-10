@@ -7,12 +7,12 @@
 <!--- Check for valid image url to display-->
 {% if image_url %}
 
-{% if tag in valid_tags %}
+  {% if valid_tags|length != 0 %}
 <!-- Displayy the detected animal tag that was passed from view-->
-<h2>Detected Animal: {% for tag in valid_tags %} {{tag}} {% endfor %}</h2>
-{% else %}
-<h2>Could not recognize this animal</h2>
-{% endif %}
+    <h2>Detected Animal: {% for tag in valid_tags %} {{tag}} {% endfor %}</h2>
+  {% else %}
+    <h2>Could not recognize this animal</h2>
+  {% endif %}
 
 
 
@@ -20,7 +20,7 @@
 <img src="{{ image_url }}" alt="Uploaded Image" width="40%">
 <!--height="300"-->
 
-{% if name in animal_names %}
+{% if animal_names|length != 0 %}
 <!-- Display the animal names in a list-->
 <h3>Animal Names</h3>
 
