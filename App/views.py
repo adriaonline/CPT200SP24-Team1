@@ -80,7 +80,6 @@ def upload_image(request):
                     
                #Extract detected names from the analysis results
                detected_tags = [tag.name for tag in result.tags]
-               for tag in detected_tags: print(tag)
 
                #Filters for only tags of animals(ignore background)
                valid_tags = [tag for tag in detected_tags if tag.lower() in ('dog', 'cat', 'bird', 'cow', 'hamster', 'snake')]
