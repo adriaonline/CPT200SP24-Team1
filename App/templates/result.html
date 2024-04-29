@@ -7,12 +7,10 @@
 <!--- Check for valid image url to display-->
 {% if image_url %}
 
-  {% if valid_tags|length != 0 %}
+  
 <!-- Displayy the detected animal tag that was passed from view-->
-    <h2>Detected Animal: {% for tag in valid_tags %} {{tag}} {% endfor %}</h2>
-  {% else %}
-    <h2>Could not recognize this animal</h2>
-  {% endif %}
+<h2>Detected Animal: {% for tag in valid_tags %} {{tag}} {% endfor %}</h2>
+
 
 
 

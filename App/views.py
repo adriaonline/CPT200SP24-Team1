@@ -65,8 +65,8 @@ def upload_image(request):
                image_path = image_instance.image.path
 
                #Normally store endpoint and key outside of program, but left in for group purposes
-               endpoint = 'https://petnamer.cognitiveservices.azure.com/'
-               key = '0f9e940c4f32467d95b1e34e91c0c954'
+               endpoint = 'https://petnamer1.cognitiveservices.azure.com/'
+               key = '5534b0b5492f43faa29dee565e56634f'
 
                #Create a vision client with the endpoint and key provided by Azure
                client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(key))
@@ -80,7 +80,9 @@ def upload_image(request):
                     
                #Extract detected names from the analysis results
                detected_tags = [tag.name for tag in result.tags]
-
+               for tag in detected_tags:
+                    print(tag)
+               
                #Filters for only tags of animals(ignore background)
                valid_tags = [tag for tag in detected_tags if tag.lower() in ('dog', 'cat', 'bird', 'cow', 'hamster', 'snake')]
 
@@ -88,11 +90,9 @@ def upload_image(request):
                animal_names = AnimalNames.objects.filter(species__in=valid_tags).values_list('name', flat=True)
                for name in animal_names: print(name)
 
-               if not valid_tags:
-                    valid_tags = ['Could not recognize this animal']
-                    animal_names = []
+              
           
-          #Redirect to the result page where it will display the speices and animal names
+          #Redirect to the result page where it will display the species and animal names
           return redirect('result', valid_tags=valid_tags, animal_names=list(animal_names))
      #If form isn't valid, reload form as empty 
      else: 
