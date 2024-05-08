@@ -7,10 +7,10 @@ Description: Would you like help picking a name for your pet?
 Simply upload a picture and we’ll recommend a few different names for you!
 _____
 
-Project Manager: Adria Gratiot, ag260153@my.stchas.edu
+Project Manager: Adria Gratiot, adriagratiot@gmail.com
 
 Developer: Matt Neiner, mn266474@my.stchas.edu
 
-Developer: Timothy Huffman, th259988@my.stchas.edu
-
 Developer: Carl Samuels, cs249030@my.stchas.edu
+
+Developer: Timothy Huffman, th259988@my.stchas.edu
