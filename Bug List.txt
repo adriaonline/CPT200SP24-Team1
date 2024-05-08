@@ -6,8 +6,8 @@ BUG LIST
 
 - This documentation is on the main branch. The program is on Matt's branch.
 
-- We attempted to remove the single quotation marks from the suggested names response page, the species as determined by the Azure API image recognition has the single quotes around it along with all of the suggested names from our databases.
+- We attempted to remove the single quotation marks from the suggested names response page, the species as determined by the Azure API image recognition has the single quotes around it along with all of the suggested names from our databases. We think because the data is saved in an array so there really wasn't any change to the displayed data.
 
-- If a picture is submitted with two animals that we have databases for, the suggested names list does not separate the names by species.
+- If a picture is submitted with two animals that we have databases for, the suggested names list does not separate the names by species. We didn't have time to attempt to fix this.
 
 - If a pet owner uploads a pet that the Azure image recognition AI does not recognize (it's set up for cats, dogs, birds, hamsters, snakes, and cows), we were unable to set up a default message that did not affect all of the recognized animals.
