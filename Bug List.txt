@@ -1,0 +1,13 @@
+BUG LIST
+
+- The Azure API requires an active account. It is only free for a limted time so we have disabled our Azure accounts as to not be charged. If you plan to run this program, you will need to put your Azure API key in the views.py file.
+
+- The Google Authentication API key is in the settings.py file. We have removed our credentials from this file also.
+
+- This documentation is on the main branch. The program is on Matt's branch.
+
+- We attempted to remove the single quotation marks from the suggested names response page, the species as determined by the Azure API image recognition has the single quotes around it along with all of the suggested names from our databases.
+
+- If a picture is submitted with two animals that we have databases for, the suggested names list does not separate the names by species.
+
+- If a pet owner uploads a pet that the Azure image recognition AI does not recognize (it's set up for cats, dogs, birds, hamsters, snakes, and cows), we were unable to set up a default message that did not affect all of the recognized animals.
